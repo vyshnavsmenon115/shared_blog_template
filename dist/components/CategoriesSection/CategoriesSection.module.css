@@ -37,7 +37,7 @@
 
 .categoryBtn.active {
     background: #004CE22B;
-    border: 2px solid;
+    border: 2px solid #004CE2;
     border-color: #004CE2;
 }
 
