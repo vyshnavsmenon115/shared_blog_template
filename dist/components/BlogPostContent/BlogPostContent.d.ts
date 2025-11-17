@@ -12,7 +12,8 @@ interface BlogPostContentProps {
         title: string;
     }>;
     showPopularPosts?: boolean;
+    showFeaturedImageOrNot?: boolean;
 }
-export default function BlogPostContent({ post, LinkComponent, popularPostLinks, showPopularPosts, }: BlogPostContentProps): React.JSX.Element;
+export default function BlogPostContent({ post, LinkComponent, popularPostLinks, showPopularPosts, showFeaturedImageOrNot, }: BlogPostContentProps): React.JSX.Element;
 export {};
 //# sourceMappingURL=BlogPostContent.d.ts.map

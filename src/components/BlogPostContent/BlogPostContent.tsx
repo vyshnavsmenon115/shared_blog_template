@@ -13,6 +13,7 @@ interface BlogPostContentProps {
         title: string;
     }>;
     showPopularPosts?: boolean;
+    showFeaturedImageOrNot?: boolean;
 }
 
 // Default Link component
@@ -31,6 +32,7 @@ export default function BlogPostContent({
     LinkComponent = DefaultLink,
     popularPostLinks = [],
     showPopularPosts = true,
+    showFeaturedImageOrNot,
 }: BlogPostContentProps) {
     return (
         <div className={styles.blog}>
@@ -48,7 +50,7 @@ export default function BlogPostContent({
                         )}
                     </div>
 
-                    {post.featuredImage && (
+                    {showFeaturedImageOrNot &&  post.featuredImage && (
                         <div className={styles.blogPostFeaturedImage}>
                             <img src={post.featuredImage} alt={post.title} className={styles.featuredImage} />
                         </div>

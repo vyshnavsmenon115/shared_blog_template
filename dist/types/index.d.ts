@@ -45,6 +45,7 @@ export interface BlogPostPageProps {
     post: BlogPost;
     searchQuery?: string;
     onSearch?: (query: string) => void;
+    showFeaturedImage?: boolean;
     ExtraComponent?: React.ComponentType<{
         post?: BlogPost;
     }>;

@@ -11,6 +11,7 @@ export default function BlogPostPage({
     post,
     searchQuery = '',
     onSearch,
+    showFeaturedImage = true,
     ExtraComponent,
     showPopularPosts = true,
     popularPostLinks = [],
@@ -22,6 +23,7 @@ export default function BlogPostPage({
             <div className={styles.postPage}>
                 <BlogPostContent
                     post={post}
+                    showFeaturedImageOrNot={showFeaturedImage}
                     popularPostLinks={popularPostLinks}
                     showPopularPosts={showPopularPosts}
                 />

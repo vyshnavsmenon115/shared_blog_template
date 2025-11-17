@@ -4,7 +4,7 @@ import { formatDate } from '../../utils/blogUtils';
 import styles from './BlogPostContent.module.css';
 // Default Link component
 const DefaultLink = ({ href, className, children }) => (React.createElement("a", { href: href, className: className }, children));
-export default function BlogPostContent({ post, LinkComponent = DefaultLink, popularPostLinks = [], showPopularPosts = true, }) {
+export default function BlogPostContent({ post, LinkComponent = DefaultLink, popularPostLinks = [], showPopularPosts = true, showFeaturedImageOrNot, }) {
     return (React.createElement("div", { className: styles.blog },
         React.createElement("div", { className: styles.blogPostPage },
             React.createElement("div", { className: styles.blogPostHeader },
@@ -14,7 +14,7 @@ export default function BlogPostContent({ post, LinkComponent = DefaultLink, pop
                     post.author && (React.createElement(React.Fragment, null,
                         React.createElement("span", null, "|"),
                         React.createElement("span", null, post.author.name)))),
-                post.featuredImage && (React.createElement("div", { className: styles.blogPostFeaturedImage },
+                showFeaturedImageOrNot && post.featuredImage && (React.createElement("div", { className: styles.blogPostFeaturedImage },
                     React.createElement("img", { src: post.featuredImage, alt: post.title, className: styles.featuredImage })))),
             React.createElement("div", { className: styles.blogPostContent, dangerouslySetInnerHTML: { __html: post.content } })),
         showPopularPosts && popularPostLinks.length > 0 && (React.createElement("div", { className: styles.popularPosts },
