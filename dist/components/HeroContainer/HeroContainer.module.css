@@ -1,0 +1,84 @@
+.hubHeroContainer {
+    width: 98.5%;
+    margin-top: 12px;
+    height: 24rem;
+    background: linear-gradient(#0099FF, #FFFFFF);
+    border-top-left-radius: 42px;
+    border-top-right-radius: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.hubHeroContainer.christmasBannerVisible {
+    height: 30rem;
+    gap: 2rem;
+}
+
+.hubMainHeading {
+    font-family: Nunito, sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    line-height: 4.4rem;
+    color: #0A396C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.hubSubHeading {
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    .hubHeroContainer {
+        height: 21rem;
+        margin-top: 2.5px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        gap: 2rem;
+    }
+
+    .hubHeroContainer.christmasBannerVisible {
+        gap: 1rem;
+        height: 25rem;
+    }
+
+    .hubMainHeading {
+        font-size: 36px;
+        line-height: 2.2rem;
+        gap: 0.5rem;
+    }
+
+    .hubSubHeading {
+        width: 60%;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    .hubHeroContainer {
+        height: 21rem;
+        margin-top: 2.5px;
+        gap: 0;
+    }
+
+    .hubMainHeading {
+        font-size: 50px;
+        line-height: 3rem;
+    }
+
+    .hubSubHeading {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}

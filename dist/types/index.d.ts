@@ -73,4 +73,24 @@ export interface CategoriesSectionProps {
     selectedCategory: string;
     onCategoryChange: (category: string) => void;
 }
+export interface HeroContainerProps {
+    NavbarComponent: React.ComponentType<{
+        searchQuery?: string;
+        [key: string]: any;
+    }>;
+    ChristmasBannerComponent?: React.ComponentType<{
+        isVisible: boolean;
+        onClose: () => void;
+        [key: string]: any;
+    }>;
+    title1: string;
+    title2?: string;
+    searchQuery?: string;
+    showChristmasBanner?: boolean;
+    onChristmasBannerClose?: () => void;
+    containerClassName?: string;
+    headingContainerClassName?: string;
+    title1ClassName?: string;
+    title2ClassName?: string;
+}
 //# sourceMappingURL=index.d.ts.map
