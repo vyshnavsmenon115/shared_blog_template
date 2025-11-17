@@ -76,7 +76,11 @@ export interface CategoriesSectionProps {
 export interface HeroContainerProps {
     NavbarComponent: React.ComponentType<{
         searchQuery?: string;
-        [key: string]: any;
+        showGetAppBtnDesktop?: boolean;
+        showGetAppBtnMobile?: boolean;
+        showSearchBar?: boolean;
+        theme?: 'dark' | 'light';
+        onSearch?: (query: string) => void;
     }>;
     ChristmasBannerComponent?: React.ComponentType<{
         isVisible: boolean;
@@ -88,6 +92,11 @@ export interface HeroContainerProps {
     title2: string;
     title3?: string;
     searchQuery?: string;
+    showGetAppBtnDesktop?: boolean;
+    showGetAppBtnMobile?: boolean;
+    showSearchBar?: boolean;
+    navbarTheme?: 'dark' | 'light';
+    onSearch?: (query: string) => void;
     showChristmasBanner?: boolean;
     onChristmasBannerClose?: () => void;
     containerClassName?: string;

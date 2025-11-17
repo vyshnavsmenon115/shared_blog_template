@@ -97,7 +97,11 @@ export interface HeroContainerProps {
     // Required Components from parent
     NavbarComponent: React.ComponentType<{
         searchQuery?: string;
-        [key: string]: any;
+        showGetAppBtnDesktop?: boolean;
+        showGetAppBtnMobile?: boolean;
+        showSearchBar?: boolean;
+        theme?: 'dark' | 'light';
+        onSearch?: (query: string) => void;
     }>;
 
     // Optional Christmas Banner Component
@@ -115,6 +119,12 @@ export interface HeroContainerProps {
 
     // Search state
     searchQuery?: string;
+
+    showGetAppBtnDesktop?: boolean;
+    showGetAppBtnMobile?: boolean;
+    showSearchBar?: boolean;
+    navbarTheme?: 'dark' | 'light';
+    onSearch?: (query: string) => void;
 
     // Banner visibility control
     showChristmasBanner?: boolean;

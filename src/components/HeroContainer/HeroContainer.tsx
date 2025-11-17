@@ -11,6 +11,11 @@ export default function HeroContainer({
     title2,
     title3,
     searchQuery = '',
+    showGetAppBtnDesktop = true,
+    showGetAppBtnMobile = true,
+    showSearchBar = false,
+    navbarTheme = 'dark',
+    onSearch,
     containerClassName = '',
     headingContainerClassName = '',
     title1ClassName = '',
@@ -36,7 +41,14 @@ export default function HeroContainer({
             className={`${styles.hubHeroContainer} ${isBannerVisible ? styles.christmasBannerVisible : ''
                 } ${containerClassName}`}
         >
-            <NavbarComponent searchQuery={searchQuery} />
+            <NavbarComponent
+                searchQuery={searchQuery}
+                showGetAppBtnDesktop={showGetAppBtnDesktop}
+                showGetAppBtnMobile={showGetAppBtnMobile}
+                showSearchBar={showSearchBar}
+                theme={navbarTheme}
+                onSearch={onSearch}
+            />
 
             {ChristmasBannerComponent && isBannerVisible && (
                 <ChristmasBannerComponent

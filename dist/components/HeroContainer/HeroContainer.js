@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import styles from './HeroContainer.module.css';
-export default function HeroContainer({ NavbarComponent, ChristmasBannerComponent, title1, title2, title3, searchQuery = '', containerClassName = '', headingContainerClassName = '', title1ClassName = '', title2ClassName = '', showChristmasBanner = false, onChristmasBannerClose, }) {
+export default function HeroContainer({ NavbarComponent, ChristmasBannerComponent, title1, title2, title3, searchQuery = '', showGetAppBtnDesktop = true, showGetAppBtnMobile = true, showSearchBar = false, navbarTheme = 'dark', onSearch, containerClassName = '', headingContainerClassName = '', title1ClassName = '', title2ClassName = '', showChristmasBanner = false, onChristmasBannerClose, }) {
     const [isBannerVisible, setIsBannerVisible] = useState(showChristmasBanner);
     useEffect(() => {
         setIsBannerVisible(showChristmasBanner);
@@ -13,7 +13,7 @@ export default function HeroContainer({ NavbarComponent, ChristmasBannerComponen
         }
     };
     return (React.createElement("div", { className: `${styles.hubHeroContainer} ${isBannerVisible ? styles.christmasBannerVisible : ''} ${containerClassName}` },
-        React.createElement(NavbarComponent, { searchQuery: searchQuery }),
+        React.createElement(NavbarComponent, { searchQuery: searchQuery, showGetAppBtnDesktop: showGetAppBtnDesktop, showGetAppBtnMobile: showGetAppBtnMobile, showSearchBar: showSearchBar, theme: navbarTheme, onSearch: onSearch }),
         ChristmasBannerComponent && isBannerVisible && (React.createElement(ChristmasBannerComponent, { isVisible: isBannerVisible, onClose: handleBannerClose })),
         React.createElement("div", { className: `${styles.hubMainHeading} ${headingContainerClassName}` },
             React.createElement("div", null,
