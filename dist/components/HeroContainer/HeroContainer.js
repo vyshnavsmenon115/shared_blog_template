@@ -16,8 +16,9 @@ export default function HeroContainer({ NavbarComponent, ChristmasBannerComponen
         React.createElement(NavbarComponent, { searchQuery: searchQuery }),
         ChristmasBannerComponent && isBannerVisible && (React.createElement(ChristmasBannerComponent, { isVisible: isBannerVisible, onClose: handleBannerClose })),
         React.createElement("div", { className: `${styles.hubMainHeading} ${headingContainerClassName}` },
-            React.createElement("span", { className: title1ClassName }, title1),
-            React.createElement("br", null),
-            React.createElement("span", { className: title1ClassName }, title2),
+            React.createElement("div", null,
+                React.createElement("span", { className: title1ClassName }, title1),
+                React.createElement("br", null),
+                React.createElement("span", { className: title1ClassName }, title2)),
             title3 && (React.createElement("div", { className: `${styles.hubSubHeading} ${title2ClassName}` }, title3)))));
 }
