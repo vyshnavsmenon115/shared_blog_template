@@ -1,31 +1,33 @@
 {
-  "name": "shared-blog-template",
-  "version": "1.0.0",
-  "description": "Shared blog template module for Next.js applications",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
-  },
-  "keywords": [
-    "blog",
-    "template",
-    "nextjs",
-    "react"
-  ],
-  "author": "",
-  "license": "MIT",
-  "peerDependencies": {
-    "lucide-react": ">=0.263.0",
-    "next": ">=13.0.0",
-    "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "cpx": "^1.5.0",
-    "typescript": "^5.0.0"
-  }
+    "name": "@your-org/shared-blog-template",
+    "version": "1.0.0",
+    "description": "Reusable blog template components for Next.js projects",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "react",
+        "blog",
+        "template",
+        "nextjs",
+        "typescript"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "peerDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "typescript": "^5.0.0"
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ]
 }

@@ -1,0 +1,52 @@
+.post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.postPage {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
+@media (max-width: 480px) {
+    .post {
+        gap: 1rem;
+    }
+
+    .postPage {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    .post {
+        gap: 1rem;
+    }
+
+    .postPage {
+        flex-direction: column;
+        width: 90%;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 1080px) and (min-width: 769px) {
+    .postPage {
+        flex-direction: column;
+        width: 90%;
+        gap: 3rem;
+    }
+}
