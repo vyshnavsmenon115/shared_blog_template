@@ -2,7 +2,7 @@
 
 import { Search } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
-import styles from './search_bar.module.css';
+import styles from './SearchBar.module.css';
 
 interface SearchBarProps {
   initialQuery?: string;

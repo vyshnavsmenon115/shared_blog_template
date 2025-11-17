@@ -5,7 +5,7 @@ import HeroContainer from './HeroContainer';
 import CategoriesSection from './CategoresSection';
 import BlogsGrid from './BlogsGrid';
 import { BlogPost, WPCategory, BlogTemplateConfig } from '../types';
-import styles from './blog_listing.module.css';
+import styles from './BlogListingPage.module.css';
 
 interface BlogListingPageProps {
   config: BlogTemplateConfig;

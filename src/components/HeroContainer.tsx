@@ -2,7 +2,7 @@
 
 import Navbar from './Navbar';
 import { NavLink } from '../types';
-import styles from './hero_container.css';
+import styles from './HeroContainer.module.css;
 
 interface HeroContainerProps {
   logo?: {

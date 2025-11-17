@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Navbar from './Navbar';
 import { BlogPost, BlogTemplateConfig } from '../types';
-import styles from './blog_post_page.module.css';
+import styles from './BlogPostPage.module.css';
 
 interface BlogPostPageProps {
   config: BlogTemplateConfig;

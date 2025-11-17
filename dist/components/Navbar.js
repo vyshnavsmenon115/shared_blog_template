@@ -1,0 +1,7 @@
+'use client';
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import Link from 'next/link';
+import styles from './Navbar.module.css';
+export default function Navbar({ logo, navLinks = [], showDownloadButton = false, downloadButtonText = 'Get App', downloadButtonLink = '#', theme = 'dark', showSearchBar = false, searchBarComponent, className = '', }) {
+    return (_jsxs("nav", { className: `${styles.navbar} ${styles[theme]} ${className}`, children: [_jsxs("div", { className: styles.navbarContent, children: [logo && (_jsx(Link, { href: logo.href || '/', className: styles.logo, children: logo.type === 'image' ? (_jsx("img", { src: logo.content, alt: "Logo", className: styles.logoImage })) : (_jsx("span", { className: styles.logoText, children: logo.content })) })), navLinks.length > 0 && (_jsx("div", { className: styles.navLinks, children: navLinks.map((link) => (_jsx(Link, { href: link.href, className: styles.navLink, children: link.label }, link.href))) })), _jsxs("div", { className: styles.rightSection, children: [showSearchBar && searchBarComponent && (_jsx("div", { className: styles.searchBarWrapper, children: searchBarComponent })), showDownloadButton && (_jsx(Link, { href: downloadButtonLink, className: `${styles.downloadBtn} ${styles.desktopOnly}`, children: downloadButtonText }))] })] }), navLinks.length > 0 && (_jsx("div", { className: styles.mobileNavLinks, children: navLinks.map((link) => (_jsx(Link, { href: link.href, className: styles.mobileNavLink, children: link.label }, link.href))) }))] }));
+}
