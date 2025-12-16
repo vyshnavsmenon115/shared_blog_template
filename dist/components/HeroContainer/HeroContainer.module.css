@@ -47,6 +47,10 @@
         gap: 1rem;
     }
 
+    .hubHeroContainer.hubHeroContainer.christmasBannerVisible {
+        height: 25rem;
+    }
+
     .hubHeroContainer.christmasBannerVisible {
         gap: 1rem;
     }
@@ -69,6 +73,10 @@
         height: 21rem;
         margin-top: 2.5px;
         gap: 0;
+    }
+
+    .hubHeroContainer.hubHeroContainer.christmasBannerVisible {
+        height: 28rem;
     }
 
     .hubMainHeading {
