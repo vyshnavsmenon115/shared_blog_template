@@ -8,6 +8,7 @@ import styles from './BlogPostPage.module.css';
 export default function BlogPostPage({
     NavbarComponent,
     FooterComponent,
+    CustomModelBannerComponent,
     post,
     searchQuery = '',
     onSearch,
@@ -19,6 +20,8 @@ export default function BlogPostPage({
     return (
         <div className={styles.post}>
             <NavbarComponent searchQuery={searchQuery} onSearch={onSearch} />
+
+            <CustomModelBannerComponent />
 
             <div className={styles.postPage}>
                 <BlogPostContent

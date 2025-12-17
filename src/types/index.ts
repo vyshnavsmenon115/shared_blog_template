@@ -58,6 +58,8 @@ export interface BlogPostPageProps {
     }>;
     FooterComponent: React.ComponentType;
 
+    CustomModelBannerComponent: React.ComponentType;
+
     // Post data from parent
     post: BlogPost;
 
