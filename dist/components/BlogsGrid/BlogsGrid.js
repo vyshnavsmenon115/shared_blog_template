@@ -2,8 +2,8 @@
 import React from 'react';
 import styles from './BlogsGrid.module.css';
 // Default Link component for non-Next.js projects
-const DefaultLink = ({ href, className, children }) => (React.createElement("a", { href: href, className: className }, children));
-export default function BlogsGrid({ posts, selectedCategory, currentPage, totalPages, onPageChange, isSearchActive, searchQuery, LinkComponent = DefaultLink, }) {
+const DefaultLink = ({ href, className, children, onClick }) => (React.createElement("a", { href: href, className: className, onClick: onClick }, children));
+export default function BlogsGrid({ posts, selectedCategory, currentPage, totalPages, onPageChange, onBlogClick, isSearchActive, searchQuery, LinkComponent = DefaultLink, }) {
     const showPagination = selectedCategory === 'Latest' && !isSearchActive && totalPages > 1;
     // Generate page numbers for pagination
     const getPageNumbers = () => {
@@ -50,7 +50,7 @@ export default function BlogsGrid({ posts, selectedCategory, currentPage, totalP
                 " post",
                 posts.length !== 1 ? 's' : '',
                 " found"))),
-        React.createElement("div", { className: styles.blogsGrid }, posts.map((post) => (React.createElement(LinkComponent, { href: `/hub/${post.slug}`, key: post.id, className: styles.blogCard },
+        React.createElement("div", { className: styles.blogsGrid }, posts.map((post) => (React.createElement(LinkComponent, { href: `/hub/${post.slug}`, key: post.id, className: styles.blogCard, onClick: () => onBlogClick?.(post) },
             React.createElement(React.Fragment, null,
                 post.featuredImage && (React.createElement("div", { className: styles.blogImage },
                     React.createElement("img", { src: post.featuredImage, alt: post.title }))),

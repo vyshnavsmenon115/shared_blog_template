@@ -13,7 +13,7 @@ const DEFAULT_CATEGORY_NAMES = [
     'Real world integrations',
     'Tutorials',
 ];
-export default function HomePage({ HeroComponent, FooterComponent, posts, categories, searchQuery = '', currentPage = 1, postsPerPage = 51, categoryNames = DEFAULT_CATEGORY_NAMES, ExtraComponent, }) {
+export default function HomePage({ HeroComponent, FooterComponent, posts, categories, searchQuery = '', currentPage = 1, postsPerPage = 51, categoryNames = DEFAULT_CATEGORY_NAMES, ExtraComponent, onBlogClick, }) {
     const [selectedCategory, setSelectedCategory] = useState('Latest');
     const [page, setPage] = useState(currentPage);
     // Reset page when search or category changes
@@ -69,7 +69,7 @@ export default function HomePage({ HeroComponent, FooterComponent, posts, catego
         React.createElement(HeroComponent, { searchQuery: searchQuery }),
         React.createElement("div", { className: styles.content },
             React.createElement(CategoriesSection, { categories: availableCategories, selectedCategory: selectedCategory, onCategoryChange: handleCategoryChange }),
-            React.createElement(BlogsGrid, { posts: paginatedPosts, selectedCategory: selectedCategory, currentPage: page, totalPages: totalPages, onPageChange: handlePageChange, isSearchActive: !!searchQuery, searchQuery: searchQuery }),
+            React.createElement(BlogsGrid, { posts: paginatedPosts, selectedCategory: selectedCategory, currentPage: page, totalPages: totalPages, onPageChange: handlePageChange, isSearchActive: !!searchQuery, searchQuery: searchQuery, onBlogClick: onBlogClick }),
             ExtraComponent && React.createElement(ExtraComponent, null)),
         React.createElement(FooterComponent, null)));
 }
